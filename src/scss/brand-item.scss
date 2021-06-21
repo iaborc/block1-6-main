@@ -1,0 +1,91 @@
+.brand-item {
+  min-width: 224px;
+  max-width: 240px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  min-height: 72px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $white;
+  transition: all 0.5s;
+  cursor: pointer;
+  &.swiper-slide{
+    min-width: 240px;
+    width: auto;
+  }
+  &_lenovo{
+    &::before{
+      content: url("../img/lenovo.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_samsung{
+    &::before{
+      content: url("../img/samsung.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_apple{
+    &::before{
+      content: url("../img/apple.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_sony{
+    &::before{
+      content: url("../img/sony.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_view-sonic{
+    &::before{
+      content: url("../img/viewSonic.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_bosch{
+    &::before{
+      content: url("../img/bosch.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_acer{
+    &::before{
+      content: url("../img/acer.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &_hp{
+    &::before{
+      content: url("../img/hp.svg");
+    }
+    &::after{
+      content: url("../img/go.svg");
+    }
+  }
+  &::after{
+    transition: transform .5s, filter .2s;
+  }
+  &:hover::after {
+    filter: opacity(0.5) hue-rotate(135deg);
+    transform: scale(1.1);
+  }
+
+}

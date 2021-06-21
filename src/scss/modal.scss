@@ -1,0 +1,63 @@
+.modal{
+  position: fixed;
+  right: 0;
+  top: 0;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  transition: .5s;
+  display: none;
+  z-index: 300;
+  background-color: $white;
+  overflow: auto;
+
+  .input {
+    margin: 16px;
+  }
+  .confirm{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .btn_send{
+    margin: 16px 16px 16px auto;
+  }
+  .btn_burger_active{
+    margin-top: 24px;
+    margin-left: 16px;
+    min-height: 40px;
+  }
+
+  @media (min-width: 768px) {
+    border-left: 1px solid $border-color;
+    box-shadow: 10px 0 20px 0 #cdcdcd;
+    max-width: 440px;
+    .btn_burger_active{
+      position: fixed;
+      top: 32px;
+      right: 472px;
+      margin: 0;
+      z-index: 300;
+    }
+    .input{
+      margin: 16px 32px;
+      max-width: 376px;
+    }
+    .confirm{
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+    .btn_send{
+      margin-right: 32px;
+      margin-top: 24px;
+    }
+  }
+  .title{
+    margin-top: 40px;
+  }
+  .title::before{
+    top: -4px;
+  }
+  &.visible {
+    display: flex; }
+}

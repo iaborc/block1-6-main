@@ -1,0 +1,38 @@
+.show-more{
+  &__label{
+    cursor: pointer;
+    line-height: 24px;
+    font-family: $medium;
+    color: $black;
+  }
+  &__checkbox{
+    display: none;
+  }
+  &__label::before{
+    content: url("../img/expand.svg");
+    display: inline-block;
+    height: 22px;
+    vertical-align: top;
+    margin-right: 8px;
+  }
+  &__checkbox:checked ~ &__label::before{
+    content: url("../img/expand.svg");
+    display: inline-block;
+    transform: rotate(180deg);
+    height: 24px;
+    vertical-align: top;
+    margin-right: 8px;
+  }
+  &__label::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+  }
+  &__checkbox:checked ~ &__label::after{
+    content: "Скрыть";
+    display: inline-block;
+  }
+  &__checkbox:checked+*{
+    max-height: fit-content !important;
+  }
+}

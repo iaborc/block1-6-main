@@ -1,0 +1,12 @@
+.link{
+  text-decoration: none;
+  color: $black;
+  display: block;
+  transition: color 0.5s;
+  &:hover{
+    color: $pink;
+  }
+  &_active,&_lang{
+    color: $gray;
+  }
+}

@@ -1,0 +1,44 @@
+.content{
+  padding-top: 89px;
+  min-width: 320px;
+  background-color: $content-bg;
+  @media (min-width: 1440px) {
+    padding-top: 0;
+    padding-left: 320px;
+  }
+  &__title{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    @media (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+    @media (min-width: 1440px) {
+      margin-top: 42px;
+      margin-bottom: 8px;
+    }
+  }
+  &__tech-buttons{
+    display: none;
+    float: right;
+    align-items: center;
+    margin-right: 30px;
+    margin-top: 42px;
+    .label {
+      margin-right: 8px;
+      margin-left: 32px;
+    }
+    @media (min-width: 1440px) {
+      display: flex;
+    }
+  }
+  .content-block{
+    margin-top: 24px;
+    @media (min-width: 768px) {
+      margin-top: 32px;
+    }
+    @media (min-width: 1440px) {
+      margin-top: 20px;
+    }
+  }
+
+}

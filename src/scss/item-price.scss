@@ -1,0 +1,37 @@
+.item-price{
+  display: flex;
+  align-items: baseline;
+  padding: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  min-width: 260px;
+  min-height: 200px;
+  max-width: 260px;
+  background-color: $white;
+  border-radius: 6px;
+  &__text{
+    font-family: $regular;
+    color: $black;
+    line-height: 18px;
+
+  }
+  &__title{
+    font-family: $medium;
+    color: $gray;
+    margin-bottom: 4px;
+    line-height: 16px;
+  }
+  &__row {
+    max-width: 200px;
+  }
+  &__row_2{
+    flex-basis: 200px;
+    flex-shrink: 0;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+  .btn_order{
+    margin-left: auto;
+    align-self: center;
+  }
+}

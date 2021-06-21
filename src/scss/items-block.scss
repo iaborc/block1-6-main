@@ -1,0 +1,26 @@
+.items-block{
+  border-bottom: 1px solid $border-color;
+  padding-bottom: 8px;
+  @media (min-width: 768px) {
+    padding-bottom: 32px;
+  }
+  @media (min-width: 1440px) {
+    padding-bottom: 50px;
+  }
+  .show-more__label{
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .show-more__label::after{
+    content: "Показать все";
+  }
+  .show-more__label::before{
+    @media (min-width: 768px) {
+      margin-left: 24px;
+    }
+    @media (min-width: 1440px) {
+      margin-left: 32px;
+    }
+  }
+}

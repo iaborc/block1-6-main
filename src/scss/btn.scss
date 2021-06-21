@@ -1,0 +1,64 @@
+.btn{
+  cursor: pointer;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: transform .5s, filter .2s;
+  box-shadow: 0 0 3px 0 $gray;
+  padding: 0;
+  &_burger{
+    background-position: center;
+    background-image: url("../img/burger.svg");
+  }
+  &_burger_active{
+    background-image: url("../img/close.svg");
+  }
+  &_search{
+    background-position: center;
+    background-image: url("../img/search.svg");
+  }
+  &_call {
+    background-position: center;
+    background-image: url("../img/call.svg");
+  }
+  &_massage{
+    background-position: center;
+    background-image: url("../img/chat.svg");
+  }
+  &_login {
+    background-position: center;
+    background-image: url("../img/profile.svg");
+  }
+  &:hover {
+    filter: opacity(0.5) hue-rotate(135deg);
+    transform: scale(1.1);
+  }
+  &_send,&_order{
+    width: 136px;
+    height: 32px;
+    min-height: 32px;
+    border-radius: 16px;
+    color: $white;
+    background-color: $pink;
+    border: 0;
+    font-family: $bold;
+    font-size: 12px;
+    line-height: 24px;
+    vertical-align: center;
+    background-image: url("../img/dropdown.svg");
+    background-position: top 50% right 11px;
+    background-repeat: no-repeat;
+  }
+  &_order{
+    width: 119px;
+  }
+  &_repair {
+    background-image: url("../img/repair.svg");
+  }
+  &_check{
+    background-image: url("../img/checkstatus.svg");
+  }
+
+
+}

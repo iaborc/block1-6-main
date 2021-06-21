@@ -1,0 +1,11 @@
+.blur{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+  opacity: .8;
+  background-color: $white;
+  &.visible {
+    z-index: 299;
+  }
+}

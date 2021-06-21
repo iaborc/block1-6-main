@@ -1,0 +1,39 @@
+.service-item {
+  text-decoration: none;
+  min-width: 224px;
+  max-width: 240px;
+  border-radius: 6px;
+  border: 1px solid #EAEAEA;
+  min-height: 160px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background-color: $white;
+  transition: all 0.5s;
+  cursor: pointer;
+  :first-child{
+    align-self: flex-start;
+  }
+  &::after{
+    content: url("../img/go.svg");
+    align-self: flex-end;
+  }
+  &.swiper-slide {
+    min-width: 240px;
+    width: auto;
+  }
+  &__label{
+    font-family: $medium;
+    font-size: 16px;
+    color: $black;
+  }
+  &::after{
+    transition: transform .5s, filter .2s;
+  }
+  &:hover::after {
+    filter: opacity(0.5) hue-rotate(135deg);
+    transform: scale(1.1);
+  }
+}

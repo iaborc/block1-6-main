@@ -1,0 +1,72 @@
+.header{
+  height: 89px;
+  min-height: 89px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed;
+  min-width: 320px;
+  z-index: 100;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+  &__left-wrapper{
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+    .btn{
+      margin-right: 16px;
+    }
+    .logo {
+      position: relative;
+      max-height: 52px;
+    }
+  }
+  &__right-wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  &__client-buttons{
+    display: none;
+  }
+  &__tech-buttons::before{
+    content: url("../img/divider.svg");
+    margin: 0 20px;
+
+  }
+  &__tech-buttons{
+    display: flex;
+    align-items: center;
+  }
+  .btn_repair{
+    margin-right: 16px;
+  }
+  &__client-buttons :not(:last-child){
+    margin-right: 16px;
+  }
+  @media (min-width: 768px) {
+    .logo::after{
+      content: url("../img/divider.svg");
+      position: absolute;
+      left: -20px;
+      bottom: 8px;
+      cursor: initial;
+    }
+    &__right-wrapper{
+      margin-right: 24px;
+    }
+    &__left-wrapper{
+      margin-left: 24px;
+      .btn{
+        margin-right: 42px;
+      }
+    }
+    &__client-buttons{
+      display: flex;
+    }
+  }
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}

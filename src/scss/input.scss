@@ -1,0 +1,18 @@
+.input{
+  border: 1px solid $ultra-light-gray;
+  border-radius: 8px;
+  height: 3em;
+  padding-left: 1em;
+  min-height: 48px;
+  max-height: 48px;
+  font-size: 16px;
+  font-family: $regular;
+  color: $light-gray;
+  &_textarea{
+    min-height: 118px;
+    max-height: 118px;
+    width: auto;
+    padding-top: 12px;
+    resize: none;
+  }
+}
