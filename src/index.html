@@ -47,21 +47,25 @@
 <div class="modal feedback">
     <button class="btn btn_burger_active" data-act="close"></button>
     <h2 class="title feedback__title">Обратная связь</h2>
-    <input placeholder="Имя" type="text" class="input">
-    <input placeholder="Телефон" type="tel" class="input">
-    <input placeholder="Электронная почта" type="email" class="input">
-    <textarea placeholder="Сообщение" rows="3" class="input input_textarea"></textarea>
+  <form method="get" action="#">
+    <input placeholder="Имя" type="text" class="input" required>
+    <input placeholder="Телефон" type="tel" class="input" required>
+    <input placeholder="Электронная почта" type="email" class="input" required>
+    <textarea placeholder="Сообщение" rows="3" class="input input_textarea" required></textarea>
     <div class="confirm">Нажимая “отправить”, вы даете согласие на <a href="#" class="link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="link">политикой конфиденциальности</a></div>
-    <button class="btn btn_send">ОТПРАВИТЬ</button>
+    <button class="btn btn_send" type="submit">ОТПРАВИТЬ</button>
+  </form>
 </div>
 
 
 <div class="modal call">
     <button class="btn btn_burger_active" data-act="close"></button>
     <h2 class="title">Заказать звонок</h2>
-    <input placeholder="Телефон" type="tel" class="input">
+  <form method="get" action="#">
+    <input placeholder="Телефон" type="tel" class="input" required>
     <div class="confirm">Нажимая “отправить”, вы даете согласие на <a href="#" class="link">обработку персональных данных</a> и соглашаетесь с нашей <a href="#" class="link">политикой конфиденциальности</a></div>
-    <button class="btn btn_send">ОТПРАВИТЬ</button>
+    <button class="btn btn_send" type="submit">ОТПРАВИТЬ</button>
+  </form>
 </div>
 
 <div class="header">
@@ -76,8 +80,8 @@
             <button class="btn btn_login"></button>
         </div>
         <div class="header__tech-buttons tech-buttons">
-            <button class="btn btn_repair"></button>
-            <button class="btn btn_check"></button>
+            <button class="btn btn_repair" data-act="massage"></button>
+            <button class="btn btn_check" data-act="massage"></button>
         </div>
     </div>
 </div>
@@ -85,20 +89,20 @@
 <div class="content">
     <div class="content__tech-buttons tech-buttons">
         <label for="repair" class="label">Оставить заявку</label>
-        <button id="repair" class="btn btn_repair"></button>
+        <button id="repair" class="btn btn_repair" data-act="massage"></button>
         <label for="check" class="label">Статус ремонта</label>
-        <button id="check" class="btn btn_check"></button>
+        <button id="check" class="btn btn_check" data-act="massage"></button>
     </div>
     <div class="title content__title">
         <h1>Услуги и сервисы</h1>
     </div>
     <div class="page-nav">
-        <button class="page-nav__button page-nav__button_active" data-act="nav">Ремонтируемые бренды</button>
-        <button class="page-nav__button" data-act="nav">Дополнительные услуги</button>
-        <button class="page-nav__button" data-act="nav">Цены на услуги</button>
-        <button class="page-nav__button" data-act="nav">Адреса сервисных центров</button>
-        <button class="page-nav__button" data-act="nav">Специальные цены</button>
-        <button class="page-nav__button" data-act="nav">Отзывы</button>
+        <button class="page-nav__button page-nav__button_active" data-act="nav" data-content="1">Ремонтируемые бренды</button>
+        <button class="page-nav__button" data-act="nav" data-content="2">Дополнительные услуги</button>
+        <button class="page-nav__button" data-act="nav" data-content="3">Цены на услуги</button>
+        <button class="page-nav__button" data-act="nav" data-content="4">Адреса сервисных центров</button>
+        <button class="page-nav__button" data-act="nav" data-content="5">Специальные цены</button>
+        <button class="page-nav__button" data-act="nav" data-content="6">Отзывы</button>
     </div>
 
     <div class="content-block">
@@ -116,7 +120,7 @@
             <label for="text" class="show-more__label"></label>
         </div>
         <div class="content-block__image">
-            <img src="./img/PictureCopy.jpg" alt="">
+            <img src="./img/PictureCopy.jpg" alt="" id="img">
         </div>
     </div>
 
@@ -205,7 +209,7 @@
                 <div class="item-price__title">Срок</div>
                 <div class="item-price__text">30 мин</div>
             </div>
-            <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+            <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
         </div>
         <div class="swiper-slide item-price">
             <div class="item-price__row">
@@ -220,7 +224,7 @@
                 <div class="item-price__title">Срок</div>
                 <div class="item-price__text">30-120 мин</div>
             </div>
-            <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+            <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
         </div>
         <div class="swiper-slide item-price">
             <div class="item-price__row">
@@ -235,7 +239,7 @@
                 <div class="item-price__title">Срок</div>
                 <div class="item-price__text">30-120 мин</div>
             </div>
-            <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+            <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
         </div>
         <div class="swiper-slide item-price">
             <div class="item-price__row">
@@ -250,7 +254,7 @@
                 <div class="item-price__title">Срок</div>
                 <div class="item-price__text">30-120 мин</div>
             </div>
-            <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+            <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
         </div>
         <div class="swiper-slide item-price">
             <div class="item-price__row">
@@ -265,7 +269,7 @@
                 <div class="item-price__title">Срок</div>
                 <div class="item-price__text">30-120 мин</div>
             </div>
-            <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+            <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
         </div>
     </div>
     <div class="swiper-pagination"></div>
@@ -284,7 +288,7 @@
     <div class="prices__column-2">Бесплатно</div>
     <div class="prices__column-3">30 мин</div>
     <div class="prices__column-4">
-        <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+        <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
     </div>
 </div>
 <div class="prices__row">
@@ -292,7 +296,7 @@
     <div class="prices__column-2">1 000 ₽</div>
     <div class="prices__column-3">30-120 мин</div>
     <div class="prices__column-4">
-        <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+        <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
     </div>
 </div>
 <div class="prices__row">
@@ -300,7 +304,7 @@
     <div class="prices__column-2">1 000 ₽</div>
     <div class="prices__column-3">30-120 мин</div>
     <div class="prices__column-4">
-        <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+        <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
     </div>
 </div>
 <div class="prices__row">
@@ -308,7 +312,7 @@
     <div class="prices__column-2">1 000 ₽</div>
     <div class="prices__column-3">30-120 мин</div>
     <div class="prices__column-4">
-        <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+        <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
     </div>
 </div>
 <div class="prices__row">
@@ -316,7 +320,7 @@
     <div class="prices__column-2">1 000 ₽</div>
     <div class="prices__column-3">30-120 мин</div>
     <div class="prices__column-4">
-        <button class="prices__btn-order btn btn_order">ЗАКАЗАТЬ</button>
+        <button class="prices__btn-order btn btn_order" data-act="massage">ЗАКАЗАТЬ</button>
     </div>
 </div>
 </div>
